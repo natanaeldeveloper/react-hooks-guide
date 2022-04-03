@@ -2,6 +2,43 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## features covered
+
+### `memo`
+Shallow Compare -> Comparação Raza
+Evita que o component entre no fluxo de renderização do React. É utilizado quando: 
+* É um componente funcional puro
+* É um componente renderizado com muita frequência
+* Suas propriedades não mudam a cada renderização
+
+### `useMemo`
+* retorna um valor *memorizado* (re-renderizado apenas quando necessário)
+* executado durante a renderização
+* mantem *integridade referencial*
+* Utilizado para evitar recálculos complexos desnecessários (não necessariamente cálculos matemáticos)
+* retorna um valor no retorno de uma função. Exemplo:
+```ts
+    const valorMemoizado = useMemo(
+        () => {
+            return /* valor de retorno */
+        },
+        [/* array de dependências */],
+    );
+```
+
+### `useCallback`
+* retorna um callback *memorizado* (re-renderizado apenas quando necessário)
+* executado apenas quando a função do callback é invocada
+* mantem *integridade referencial*
+* retorna um callback no retorno da função. Exemplo:
+```ts
+    const callbackMemoizado = useCallback(
+        () => {
+        // callback
+        },
+        [/* array de dependências */],
+    );
+```
 ## Available Scripts
 
 In the project directory, you can run:
