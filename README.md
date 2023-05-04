@@ -2,7 +2,7 @@
 
 ## Objetivo do projeto
 
-Exemplificar o uso das funcionalidades `memo`, `useMemo` e `useCallback` disponibilizadas apartir do `React@1.16`
+Exemplificar o uso de algumas hooks como: `memo`, `useMemo` e `useCallback` disponibilizadas apartir do `React@1.16`
 ## Funcionalidades
 ### `memo`
 
